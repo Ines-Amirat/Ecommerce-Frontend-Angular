@@ -2,7 +2,11 @@
        <form id="login" (ngSubmit)="onSubmit()">
           <h1 id ="LogIn">Log In</h1>
           <input type="email" name="email" [(ngModel)] ="email" placeholder="Email" required>
+          <p>{{emailError}}</p>
           <input type="password" name="password" [(ngModel)] ="password" placeholder="Password" required>
+          <p>{{passwordError}}</p>
           <button type="submit" >Log In</button>
        </form>
 </div>
+
+

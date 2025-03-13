@@ -11,9 +11,24 @@ export class LoginComponent {
   email: string = '';
   password: string = '';
 
+
+  emailError: string = '';
+  passwordError: string = '';
+
+
   constructor(private authService: AuthService) { }
 
   onSubmit() {
+    if (!this.email || !this.password) {
+      if (this.email == '') {
+        this.emailError = 'Enter your e-mail address';
+      }
+      if (this.password == '') {
+        this.passwordError = 'Enter your password';
+      }
+      return;
+    }
+    
     this.authService.loginClient(this.email, this.password)
       .subscribe({
         next: (response) => {
@@ -25,5 +40,5 @@ export class LoginComponent {
       });
   }
 
-
 }
+

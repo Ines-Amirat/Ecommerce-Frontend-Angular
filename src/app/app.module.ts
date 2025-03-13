@@ -9,6 +9,8 @@ import { FooterComponent } from './Layout/footer/footer.component';
 import { LoginComponent } from './modules/auth/login/login.component';
 import { SignupComponent } from './modules/auth/signup/signup.component';
 import { FormsModule } from '@angular/forms';
+import { ProductsComponent } from './modules/product/products/products.component';
+import { HomeComponent } from './modules/home/home/home.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    ProductsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
