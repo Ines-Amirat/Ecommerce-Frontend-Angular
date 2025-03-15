@@ -1,12 +1,28 @@
-<div id="principal">
-       <form id="login" (ngSubmit)="onSubmit()">
-          <h1 id ="LogIn">Log In</h1>
-          <input type="email" name="email" [(ngModel)] ="email" placeholder="Email" required>
-          <p>{{emailError}}</p>
-          <input type="password" name="password" [(ngModel)] ="password" placeholder="Password" required>
-          <p>{{passwordError}}</p>
-          <button type="submit" >Log In</button>
-       </form>
+<div class="container d-flex justify-content-center align-items-center vh-100 ">
+    <div class="card p-4 shadow-lg width">
+        <form  (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+                <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleDropdownFormEmail1" [(ngModel)]="email" placeholder="email@example.com" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleDropdownFormPassword1" [(ngModel)]="password" placeholder="Password" required>
+            </div>
+            <div class="mb-3">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                    <label class="form-check-label" for="dropdownCheck">
+                        Remember me
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 color">Log in</button>
+        </form>
+        <div class="dropdown-divider my-3"></div>
+        <div class="text-center">
+            <a class="dropdown-item" href="#">New around here? Sign up</a>
+            <a class="dropdown-item" href="#">Forgot password?</a>
+        </div>
+    </div>
 </div>
-
-
