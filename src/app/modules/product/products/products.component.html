@@ -1,35 +1,51 @@
-<div class="container mt-3 custom-input">
 
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="search your favorite product">
-        <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button">
-                <i class="bi bi-search"></i>
-            </button>
-        </div>
+<div class="container mt-3 custom-input ">
+
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="search your favorite product's">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button">
+        <i class="bi bi-search"></i>
+      </button>
     </div>
-    <nav class="navbar navbar-expand-lg bg-white  ">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav gap-5">
-              <li class="nav-item">
-                <a class="nav-link active " aria-current="page" href="#">Makeup</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " href="#">Skincare</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Hair/Body</a>
-              </li>
-            </ul>
+  </div>
+  <nav class="navbar navbar-expand-lg bg-white  ">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav gap-5">
+          <li class="nav-item">
+            <a class="nav-link active " aria-current="page" href="#">Makeup</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#">Skincare</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Hair/Body</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+
+  <div class="container mt-4 color ">
+    <div class="row">
+      <div class="col-md-2 mb-4 p-1 "*ngFor="let product of products">
+        <div class="card">
+          <img [src]="product.imageURL" alt="">
+          <div class="card-body">
+            <h5 class="card-title ">{{product.title}}</h5>
+            <p class="card-text ">{{product.description}}</p>
+            <p class="card-text "><strong>${{product.price}}</strong></p>
+            <button class="btn btn-primary btn-custom mt-3">Ajouter au panier</button>
           </div>
         </div>
-    </nav>
-      
-    <div class="list">
-
+      </div>
     </div>
-</div>
+  </div>
+
