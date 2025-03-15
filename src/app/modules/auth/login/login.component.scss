@@ -2,6 +2,15 @@
     width: 420px ;
 }
 .color{
-    background-color: rgb(176, 147, 141);
+    background-color: #d4bbb8;
     color: black;
+}
+.color:hover{
+     background-color: #B78C83;
+     color: rgb(0, 0, 0);
+}
+
+.color:active{
+    background-color:  #B78C83 !important;
+    color: rgb(0, 0, 0) !important;
 }
