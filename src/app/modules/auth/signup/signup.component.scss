@@ -1,46 +1,16 @@
-#principal {
-    margin: 0%;
-    height: 100vh;
-    background-color: rgb(250, 242, 239);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-
+.width {
+    width: 420px ;
+}
+.color{
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
+.color:hover{
+     background-color: #B78C83;
+     color: rgb(0, 0, 0);
 }
 
-#signup {
-    height: 60%;
-    width: 25%;
-    background-color: aliceblue;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap:25px;
-    box-shadow: 2px 2px 5px rgb(161, 161, 161);
-}
-
-
-input[type="text"]{
-    margin-top: 10%;
-
-}
-input[type="email"],input[type="password"],input[type="text"]{
-    height: 25px;
-    width: 70%; 
-   
-}
-
-button{
-    background-color: rgb(162, 148, 142);
-    width: 70%; 
-    height:30px;
-    border: none;
-    font-size: 15px;
-    font-weight: 300;
-    cursor: pointer;
-}
-
-#SignUp{
-    color: rgb(103, 94, 90);;
+.color:active{
+    background-color:  #B78C83 !important;
+    color: rgb(0, 0, 0) !important;
 }

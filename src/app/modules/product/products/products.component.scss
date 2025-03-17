@@ -6,9 +6,53 @@
 } 
 .color{
     background-color: #f0ebe6 ;
-    width: 75%;
+    width:95%;
   
 }
+
+.main{
+    
+}
+.category-list{
+   
+}
+.list-group{
+   padding-left: 25px;
+   list-style-type:none;
+   
+ }
+
+.category-title{
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    color:#333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+.item{
+    background-color: none;
+    border:none;
+    font-size: 13px;
+    cursor: pointer;
+    
+}
+.item:hover{
+    color:rgb(199, 127, 79);
+}
+.item:active{
+    color:rgb(199, 127, 79);
+}
+ 
+ 
+.list-products{
+    background-color: antiquewhite;
+    width: 95%;
+}
+
 .card{
     width: 100%;
     height: 280px;
@@ -53,7 +97,10 @@
     font-size:12px ;
     padding: 6px;
     width:100%;
+    background-color: black;
+    color:rgb(255, 255, 255);
 }
+
 
 
 
