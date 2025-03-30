@@ -3,11 +3,11 @@
         <form  (ngSubmit)="onSubmit()">
             <div class="mb-3">
                 <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleDropdownFormEmail1" [(ngModel)]="email" placeholder="email@example.com" required>
+                <input type="email" class="form-control" id="exampleDropdownFormEmail1" name ="email"[(ngModel)]="email" placeholder="email@example.com" required>
             </div>
             <div class="mb-3">
                 <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleDropdownFormPassword1" [(ngModel)]="password" placeholder="Password" required>
+                <input type="password" class="form-control" id="exampleDropdownFormPassword1" name ="password" [(ngModel)]="password" placeholder="Password" required>
             </div>
             <div class="mb-3">
                 <div class="form-check">

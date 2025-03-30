@@ -813,8 +813,10 @@ a:focus {
   height: 100%;
 }
 
+
+
 .info_section {
-  background-color: #04233b;
+  background-color: #000000;
   color: #ffffff;
   padding: 45px 0 15px 0;
 }

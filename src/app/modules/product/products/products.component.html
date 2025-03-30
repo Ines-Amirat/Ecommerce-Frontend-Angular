@@ -23,11 +23,11 @@
      <div class="col-md-10">
          <div class="container mt-4 list-products">
              <div class ="row">
-                 <div class="col-md-2 mb-1 p-1 " *ngFor="let product of products">
+                 <div class="col-md-2 mb-1 p-1 " (click)="goToProduct(product.productId)" *ngFor="let product of products">
                     <div class="card">
                         <img [src]="product.imageURL" alt="">
                         <div class="card-body">
-                            <h5 class="card-title">{{product.title}}</h5>
+                            <h5 class="card-title">{{product.name}}</h5>
                             <p class="card-text">{{product.description}}</p>
                             <p class="price">{{product.price}}</p>
                             <button class="btn btn-primary btn-custom mt-2">Ajouter au panier</button>
