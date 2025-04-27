@@ -32,7 +32,13 @@ export class LoginComponent {
     this.authService.loginClient(this.email, this.password)
       .subscribe({
         next: (response) => {
-          console.log(response);
+            console.log(response);
+            const name = response.name;
+            const email = response.email; 
+            localStorage.setItem('email',email);
+            localStorage.setItem('name',name);
+            localStorage.setItem(`panier_${email}`,JSON.stringify([]));
+
         },
         error: (error) => {
           console.log(error);

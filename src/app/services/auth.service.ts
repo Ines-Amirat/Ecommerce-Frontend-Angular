@@ -10,7 +10,7 @@ export class AuthService {
   constructor(private apiService: ApiService) { }
 
   loginClient(email: string, password: string):Observable<any> {
-    return this.apiService.loginClient(email, password);
+      return this.apiService.loginClient(email, password);
       
   }
 
