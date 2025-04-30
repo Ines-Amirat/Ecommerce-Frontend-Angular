@@ -1,10 +1,10 @@
 .content{
     background-color: #DCDCDC;
 }
-.title{
-    color:#333;
+.title-page{
+    color:#000000;
     border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
+    padding-bottom: 20px;
     padding-top: 5px;
 
 }
@@ -25,3 +25,76 @@
 .container{
     background-color: rgb(255, 255, 255);
 }
+.price{
+    color: red;
+    font-weight: bold;
+}
+.title{
+    color: #1d1d1d;
+    font-size: 16px;
+}
+.quantity{
+    width: 90px;
+    border-radius: 2px solid ;
+}
+.minus{
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+}
+.plus{
+    width: 20px;
+    height: 20px;
+    background-color:#ffffff
+}
+.num{
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+}
+.heart{
+    background-color: #ffffff;
+    border: none;
+}
+.favourite{
+    background-color: #ffffff;
+    border: none;
+}
+.subtotal {
+    background-color: #ffffff;
+    
+}
+.paiement{
+    background-color: #ffffff;
+}
+.paiement h4{
+    font-weight: bold;
+    font-size: 20px;
+    color: #222;
+}
+.col-md-3 .subtotal h4{
+    font-weight: bold;
+    font-size: 20px;
+    color: #222;
+}
+.col-md-3 .subtotal h4 span{
+    font-size: 1rem;
+    color: #666;
+    font-weight: normal;
+
+    
+}
+.col-md-3 .subtotal p{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #222;
+
+}
+.col-md-3 .subtotal button{
+    width: 90%;
+   
+}
+

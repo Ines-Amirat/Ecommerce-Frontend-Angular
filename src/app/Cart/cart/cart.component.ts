@@ -18,6 +18,16 @@ export class CartComponent {
     if (products_string) {
       this.products = JSON.parse(products_string);
     }
+    console.log(this.products);
 
+  }
+
+  minus(){
+    let email = localStorage.getItem('email');
+    const products_string = localStorage.getItem(`panier_${email}`);
+    if (products_string) {
+      this.products = JSON.parse(products_string);
+    }
+    console.log(this.products);
   }
 }
