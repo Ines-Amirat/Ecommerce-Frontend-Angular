@@ -12,11 +12,11 @@ import { Product } from 'src/app/models/Product';
 })
 export class ProductDetailComponent {
   product!: Product;
-  constructor(private ProductService: ProductService, private route: ActivatedRoute) { }
+  constructor(private productService: ProductService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.ProductService.getProductById(id)
+    this.productService.getProductById(id)
       .subscribe({
         next: (product) => {
           this.product = product;
@@ -30,18 +30,14 @@ export class ProductDetailComponent {
   }
 
   AddProduct() {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
     let email = localStorage.getItem('email');
-    let products: Product[] = [];
-    let list_products = localStorage.getItem(`panier_${email}`);
-    if (list_products) {
-      products = JSON.parse(list_products);
+    let token_user = localStorage.getItem(`token_${email}`);
+
+    if (token_user) {
+      this.productService.AddProductCart(id, token_user);
     }
-    products.push(this.product);
 
-    localStorage.setItem(`panier_${email}`, JSON.stringify(products));
-    console.log(localStorage);
+
   }
-
-
-
 }

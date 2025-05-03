@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Product } from '../models/Product';
 
@@ -26,6 +26,19 @@ export class ApiService {
   getProductById(id:number): Observable<any> {
     return this.http.get<Product>(`${this.apiURL}/product/${id}`);
   }
+  
+  AddProductCart(id:number,token:string): Observable<any> {
+    
+    const headers =new HttpHeaders().set('Authorization' ,`Bearer ${token}`);
+    
+    return this.http.post(
+         `${this.apiURL}/cart/add`,
+         {productId :id},
+         {headers}
+      
+    )
+  }
+
 
 
 }

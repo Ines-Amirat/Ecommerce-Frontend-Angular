@@ -18,6 +18,10 @@ export class ProductService {
    getProductById(id: number):Observable<any> {
     return this.apiService.getProductById(id);
       
- }
+   }
+   
+   AddProductCart(id:number,token:string){
+     return this.apiService.AddProductCart(id,token);
+   }
   
 }
