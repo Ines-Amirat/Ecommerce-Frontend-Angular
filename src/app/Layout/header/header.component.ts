@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,11 +6,14 @@ import {Router} from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+   showSearch : boolean = false ;
+   constructor() {}
+   
+   toggleSearch(){
+      this.showSearch = !this.showSearch ;
+   }
 
-  constructor(private router:Router) { }
 
-  goToCart(){
-    this.router.navigate(['cart']);
-  }
+ 
 
 }

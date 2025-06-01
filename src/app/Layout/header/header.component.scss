@@ -1,20 +1,15 @@
-.navbar{
-    background-color: black;
+.fjalla-one-regular {
+    font-family: "Fjalla One", sans-serif;
+    font-style: normal;
 }
-.myshop{
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    font-size: 24px;
+.btn-search{
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
 }
-.compte{
-    color: rgb(255, 255, 255);
-}
-.compte-icon{
-    color: rgb(255, 255, 255);
-}
-.cart{
-    color: rgb(255, 255, 255);
-}
-.panier{
-    color: rgb(250, 250, 250);
+.input-search{
+  width: 180px;
+  font-size: 13px;
+  padding: 4px 8px;
 }

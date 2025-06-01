@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { ProductService } from 'src/app/services/product.service';
 import { ActivatedRoute } from '@angular/router';
+import { CartProduct } from 'src/app/models/CartProduct';
 import { Product } from 'src/app/models/Product';
+import { CartProductService } from 'src/app/services/cart-product.service';
 
 @Component({
   selector: 'app-cart',
@@ -10,19 +11,29 @@ import { Product } from 'src/app/models/Product';
 })
 export class CartComponent {
   products: Product[] = [];
-  constructor(private ProductService: ProductService) { }
+  cartProductsList : CartProduct[] = [];
+  constructor(private cartProductService: CartProductService ) { }
   
   ngOnInit(): void {
-    localStorage.clear();
-    let email = localStorage.getItem('email')
-    const products_string = localStorage.getItem(`panier_${email}`);
-    if (products_string) {
-      this.products = JSON.parse(products_string);
-    }
-    console.log(this.products);
-    
-    
+     
+    let token_user = localStorage.getItem('token');
 
+    if (token_user) {
+      this.cartProductService.cartProductsList(token_user)
+      .subscribe({
+        next: (cartProducts) => {
+          this.cartProductsList = cartProducts;
+          this.products = this.cartProductsList.map (element  => element.product);
+          console.log(this.products);
+        },
+        error: (error) => {
+          console.log(error);
+        }
+
+      });
+    }
+
+  
   }
 
  

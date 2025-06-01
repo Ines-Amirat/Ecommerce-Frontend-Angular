@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Product } from '../models/Product';
+import { CartProduct } from '../models/CartProduct';
 
 @Injectable({
   providedIn: 'root'
@@ -28,15 +29,23 @@ export class ApiService {
   }
   
   AddProductCart(id:number,token:string): Observable<any> {
-    
+    console.log("dehduehidueh")
     const headers =new HttpHeaders().set('Authorization' ,`Bearer ${token}`);
-    
     return this.http.post(
-         `${this.apiURL}/cart/add`,
+         `${this.apiURL}/cartProduct/add`,
          {productId :id},
          {headers}
       
-    )
+    );
+  }
+
+  getCartProducts(token:string): Observable<any> {
+    const headers =new HttpHeaders().set('Authorization' ,`Bearer ${token}`);
+    return this.http.post<CartProduct[]>( 
+        `${this.apiURL}/cartProduct/get`,
+         {},
+         {headers}
+    );
   }
 
 

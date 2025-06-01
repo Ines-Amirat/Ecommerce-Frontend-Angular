@@ -21,6 +21,7 @@ export class LoginComponent {
   constructor(private authService: AuthService) { }
 
   onSubmit() {
+    localStorage.clear();
     if (!this.email || !this.password) {
       if (this.email == '') {
         this.emailError = 'Enter your e-mail address';
@@ -34,12 +35,14 @@ export class LoginComponent {
     this.authService.loginClient(this.email, this.password)
       .subscribe({
         next: (response) => {
-            const email = response.email;
-
+          console.log(response);
+            this.email = response.email;
             this.token = response.token;
 
-            localStorage.setItem('email',email);
-            localStorage.setItem(`token_${email}`,this.token);
+            localStorage.setItem('email',this.email);
+            localStorage.setItem('token',this.token);
+           
+            
         },
         error: (error) => {
           console.log(error);

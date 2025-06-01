@@ -20,8 +20,7 @@ export class ProductService {
       
    }
    
-   AddProductCart(id:number,token:string){
-     return this.apiService.AddProductCart(id,token);
-   }
-  
+   
+   
+
 }

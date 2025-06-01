@@ -1,44 +1,45 @@
-<div class="content pt-4">
-<div class="container  custom-input ">
-  <div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="search your favorite product's">
-    <div class="input-group-append">
-      <button class="btn btn-outline-secondary" type="button">
-        <i class="bi bi-search"></i>
+<div class="content pt-4 vh-100" >
+  <div class="container  custom-input justify-content-between  d-flex align-items-center w-100 ">
+    <div>
+      <p class=" fs-4 fw-bold ps-3" style="margin-bottom: 0%; ">All Products</p>
+    </div>
+    <div class=" d-flex align-items-center position-relative search-wrapper ">
+      <i class="bi bi-search search-icon  position-absolute "></i>
+      <input type="text" class="form-control search-input flex-grow-1" placeholder="Search on Shop ">
+      <button class="btn btn-outline-secondary btn-search" type="button">
+        Search
       </button>
     </div>
   </div>
-</div>
-
-
-<div class="main">
-  <div class ="row">
-     <div class="col-md-2 category-list" >
+  <div class="main">
+    <div class="row">
+      <div class="col-md-2 category-list">
         <h3 class="category-title">Categories</h3>
         <ul class="list-group">
-          <li  class="item fw-normal" *ngFor =" let category of categories">{{category.name}}</li>
+          <li class="item fw-normal" *ngFor=" let category of categories">{{category.name}}</li>
         </ul>
-     </div>
-     <div class="col-md-10">
-         <div class="container mt-4 list-products">
-             <div class ="row">
-                 <div class="col-md-2 mb-1 p-1 " (click)="goToProduct(product.productId)" *ngFor="let product of products">
-                    <div class="card">
-                        <img [src]="product.imageURL" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">{{product.name}}</h5>
-                            <p class="price">${{product.price}}</p>
-                            <button class="btn btn-primary btn-custom mt-2">Ajouter au panier</button>
-                        </div>
-                    </div>
-                 </div>
-             </div>
-         </div>
-     </div>
+      </div>
+      <div class="col-md-10">
+        <div class="container mt-4 list-products">
+          <div class="row">
+            <div class="col-md-2 mb-4 p-1" (click)="goToProduct(product.productId)" *ngFor="let product of products">
+              <div class="card">
+                <div style="background-color: #f0f0f0; padding: 15px;">
+                  <img [src]="'assets/images/' +product.imageURL" alt="" >
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{product.name}}</h5>
+                  <p class="price">${{product.price}}</p>
+                  <div class="d-flex align-items-center gap-1" >
+                    <button class="btn btn-white btn-sm  mt-2">Add to Cart</button>
+                    <button class="btn btn-black btn-sm mt-2">Buy Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-</div>
-
-
-
-
