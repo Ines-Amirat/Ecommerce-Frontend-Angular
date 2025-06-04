@@ -1,5 +1,5 @@
 <div>
-    <div style="background-color: rgb(236, 236, 236);">
+    <div class="ms-4 me-4 " style="background-color: rgb(236, 236, 236); ">
         <div class="d-flex align-items-center justify-content-center  container pt-5">
             <div class="w-50">
                 <h1 class="title  text-black mb-4">Tech Accessories</h1>
@@ -13,15 +13,117 @@
             </div>
         </div>
     </div>
-    <div class="d-flex justify-content-center pt-4  ">
-        <div class="container row " style="background-color: rgb(197, 181, 212);">
-            <div class="col-md-2 card card-custom ">
-                <div class="img-category" style="background-color: aqua;">
-                    <img [src]="'assets/images/img2.png'"  alt="">
-                </div>
-                 <p>huieh"iueui"</p>
+    <div class="container container-category pt-4 mt-4 ">
+        <h4 class="ms-4 mb-4 fw-bold fs-5 category-title">Shop By Categories</h4>
+        <div class="d-flex justify-content-center gap-4">
+            <div class="card border-0 category-card">
+                <img [src]="'assets/images/img2.png'" class="image-category" alt="">
+                <p class="mt-5">Headphones&Earbuds</p>
             </div>
         </div>
-        
     </div>
-</div>
+    <div class="container mt-5 ">
+        <div class="row">
+            <div class="col-md-6">
+                <div class=" card  border-0 " style="background-color: rgb(236, 236, 236);">
+                    <div class="row">
+                        <div class="col-md-6  pt-5 ps-5">
+                            <p class="text-danger">10% OFF This Week</p>
+                            <p>Take control of every game with <br>precision
+                                and comfort</p>
+                            <button class="btn btn-featured ">Shop Now</button>
+                        </div>
+                        <div class="img-featured col-md-6">
+                            <img [src]="'assets/images/img7.png'" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class=" card  border-0 " style="background-color: rgb(236, 236, 236);">
+                    <div class="row">
+                        <div class="col-md-6  pt-5 ps-5">
+                            <p class="text-danger">20% OFF Today</p>
+                            <p>Keep your home safe with smart <br>reliable 24/7 monitoring</p>
+                            <button class="btn btn-featured">Shop Now</button>
+                        </div>
+                        <div class="img-featured col-md-6">
+                            <img [src]="'assets/images/img6.png'" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <h4 class="mb-3">Best Sellers</h4>
+        <div class="row">
+            <div class="col-md-2">
+                <div class=" card  border-0 card-custom d-flex align-items-center mb-2">
+                    <img [src]="'assets/images/img2.png'" class="image-bestSellers" alt="">
+                    <p class="mt-3">Headphones&Earbuds</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <h4 class="mb-3">Best Sellers</h4>
+        <div class="row">
+            <div class="col-md-2">
+                <div class=" card  border-0 card-custom d-flex align-items-center mb-2">
+                    <img [src]="'assets/images/img2.png'" class="image-bestSellers" alt="">
+                    <p class="mt-3">Headphones&Earbuds</p>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class=" card  border-0 card-custom d-flex align-items-center mb-2">
+                    <img [src]="'assets/images/img2.png'" class="image-bestSellers" alt="">
+                    <p class="mt-3">Headphones&Earbuds</p>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class=" card  border-0 card-custom d-flex align-items-center mb-2">
+                    <img [src]="'assets/images/img2.png'" class="image-bestSellers" alt="">
+                    <p class="mt-3">Headphones&Earbuds</p>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class=" card  border-0 card-custom d-flex align-items-center mb-2">
+                    <img [src]="'assets/images/img2.png'" class="image-bestSellers" alt="">
+                    <p class="mt-3">Headphones&Earbuds</p>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class=" card  border-0 card-custom d-flex align-items-center mb-2">
+                    <img [src]="'assets/images/img2.png'" class="image-bestSellers" alt="">
+                    <p class="mt-3">Headphones&Earbuds</p>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class=" card  border-0 card-custom d-flex align-items-center mb-2">
+                    <img [src]="'assets/images/img2.png'" class="image-bestSellers" alt="">
+                    <p class="mt-3">Headphones&Earbuds</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="subscribe " style="background-color: rgb(236, 236, 236);" >
+        <div class="row " >
+            <div class="col-md-6 d-flex align-items-center text-subscribe" >
+                <div>
+                    <h4 class="text-black fw-bold">Exclusive Offers</h4>
+                    <p>Subscribe now to get weekly updates, exclusive new stuff, and enjoy 10% off your first purchase </p>
+                    <div class=" d-flex gap-2">
+                        <input class="input-subscribe" type="text" placeholder="Enter Your Email" >
+                        <button class=" btn btn-subscribe ">subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="img-subscribe" >
+                    <img [src]="'assets/images/img3.png'" alt="" class="ms-5 " >
+                </div>
+            </div>
+        </div>
+    </div>

@@ -18,5 +18,5 @@ export class AuthService {
     return this.apiService.registerClient(name,email, password);
       
   }
-
+   
 }

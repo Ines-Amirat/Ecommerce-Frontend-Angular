@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Product } from '../models/Product';
 import { CartProduct } from '../models/CartProduct';
+import { Category } from '../models/Category';
 
 @Injectable({
   providedIn: 'root'
@@ -46,6 +47,10 @@ export class ApiService {
          {},
          {headers}
     );
+  }
+
+  getCategories(): Observable<any>{
+      return this.http.get<Category[]>(`${this.apiURL}/categories/get`);
   }
 
 
