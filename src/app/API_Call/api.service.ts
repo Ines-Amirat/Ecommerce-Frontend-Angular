@@ -54,5 +54,10 @@ export class ApiService {
   }
 
 
+  getFeaturedProducts(): Observable<any> {
+    return this.http.get<Product[]>(`${this.apiURL}/product/getFeatured`);
+  }
+
+
 
 }

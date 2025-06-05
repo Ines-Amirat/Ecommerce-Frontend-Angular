@@ -15,11 +15,17 @@
     </div>
     <div class="container container-category pt-4 mt-4 ">
         <h4 class="ms-4 mb-4 fw-bold fs-5 category-title">Shop By Categories</h4>
-        <div class="d-flex justify-content-center gap-4">
-            <div class="card border-0 category-card">
-                <img [src]="'assets/images/img2.png'" class="image-category" alt="">
-                <p class="mt-5">Headphones&Earbuds</p>
+        <div class="category-wrapper position-relative ">
+            <button class=" scroll-btn  right" (click)="scrollRight()"><i class="bi bi-arrow-right "></i></button>
+            <div class="category-container " #scrollContainer>
+                <div class="card border-0 category-card " *ngFor="let category of categories">
+                    <div class="image-category" >
+                        <img [src]="'assets/images/'+ category.imgURL" alt="">
+                        <p class="mt-5  cat-title" >{{category.categoryName}}</p>
+                    </div>
+                </div>
             </div>
+            <button class=" scroll-btn  left" (click)="scrollLeft()"><i class="bi bi-arrow-left "></i></button>
         </div>
     </div>
     <div class="container mt-5 ">
@@ -58,10 +64,10 @@
     <div class="container mt-5">
         <h4 class="mb-3">Best Sellers</h4>
         <div class="row">
-            <div class="col-md-2">
-                <div class=" card  border-0 card-custom d-flex align-items-center mb-2">
-                    <img [src]="'assets/images/img2.png'" class="image-bestSellers" alt="">
-                    <p class="mt-3">Headphones&Earbuds</p>
+            <div class="col-md-2"  *ngFor="let product of products">
+                <div class=" card  border-0 card-custom d-flex align-items-center mb-2" >
+                    <img [src]="'assets/images' + product.imageURL" class="image-bestSellers" alt="">
+                    <p class="mt-3">{{product.name}}</p>
                 </div>
             </div>
         </div>
@@ -108,21 +114,22 @@
         </div>
     </div>
 
-    <div class="subscribe " style="background-color: rgb(236, 236, 236);" >
-        <div class="row " >
-            <div class="col-md-6 d-flex align-items-center text-subscribe" >
+    <div class="subscribe " style="background-color: rgb(236, 236, 236);">
+        <div class="row ">
+            <div class="col-md-6 d-flex align-items-center text-subscribe">
                 <div>
                     <h4 class="text-black fw-bold">Exclusive Offers</h4>
-                    <p>Subscribe now to get weekly updates, exclusive new stuff, and enjoy 10% off your first purchase </p>
+                    <p>Subscribe now to get weekly updates, exclusive new stuff, and enjoy 10% off your first purchase
+                    </p>
                     <div class=" d-flex gap-2">
-                        <input class="input-subscribe" type="text" placeholder="Enter Your Email" >
+                        <input class="input-subscribe" type="text" placeholder="Enter Your Email">
                         <button class=" btn btn-subscribe ">subscribe</button>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="img-subscribe" >
-                    <img [src]="'assets/images/img3.png'" alt="" class="ms-5 " >
+                <div class="img-subscribe">
+                    <img [src]="'assets/images/img3.png'" alt="" class="ms-5 ">
                 </div>
             </div>
         </div>

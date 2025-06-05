@@ -7,6 +7,7 @@ export interface Product {
     oldPrice: number;
     brand:string;
     stock :number;
+    isFeatured : boolean;
     features:string[];
     
 }

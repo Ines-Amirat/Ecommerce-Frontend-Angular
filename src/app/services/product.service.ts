@@ -11,16 +11,17 @@ export class ProductService {
   constructor(private apiService: ApiService) { }
 
    ProductsList():Observable<any> {
-      return this.apiService.getProducts();
-        
+      return this.apiService.getProducts();  
    }
 
    getProductById(id: number):Observable<any> {
     return this.apiService.getProductById(id);
       
    }
-   
-   
-   
+
+    featuredProducts():Observable<any> {
+      return this.apiService.getFeaturedProducts();
+        
+   }
 
 }
