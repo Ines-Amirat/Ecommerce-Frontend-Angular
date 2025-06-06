@@ -18,17 +18,17 @@
         <div class="category-wrapper position-relative ">
             <button class=" scroll-btn  right" (click)="scrollRight()"><i class="bi bi-arrow-right "></i></button>
             <div class="category-container " #scrollContainer>
-                <div class="card border-0 category-card " *ngFor="let category of categories">
-                    <div class="image-category" >
+                <div class="card border-0  category-card " *ngFor="let category of categories">
+                    <div class="image-category">
                         <img [src]="'assets/images/'+ category.imgURL" alt="">
-                        <p class="mt-5  cat-title" >{{category.categoryName}}</p>
+                        <p class="mt-5  cat-title">{{category.categoryName}}</p>
                     </div>
                 </div>
             </div>
             <button class=" scroll-btn  left" (click)="scrollLeft()"><i class="bi bi-arrow-left "></i></button>
         </div>
     </div>
-    <div class="container mt-5 ">
+    <div class="container container-promo  mt-5 ">
         <div class="row">
             <div class="col-md-6">
                 <div class=" card  border-0 " style="background-color: rgb(236, 236, 236);">
@@ -54,66 +54,112 @@
                             <button class="btn btn-featured">Shop Now</button>
                         </div>
                         <div class="img-featured col-md-6">
-                            <img [src]="'assets/images/img6.png'" alt="">
+                            <img [src]="'assets/images/img14.png'" alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container mt-5">
-        <h4 class="mb-3">Best Sellers</h4>
+    <div class="container conatiner-featured mt-5">
+        <h4 class="mb-4   fw-bold fs-5 title title-font" style="text-align: center;">Featured Products</h4>
         <div class="row">
-            <div class="col-md-2"  *ngFor="let product of products">
-                <div class=" card  border-0 card-custom d-flex align-items-center mb-2" >
-                    <img [src]="'assets/images' + product.imageURL" class="image-bestSellers" alt="">
-                    <p class="mt-3">{{product.name}}</p>
+            <div class="col-md-2" *ngFor="let product of products">
+                <div class=" card  border-0 card-custom d-flex align-items-center mb-2 ">
+                    <div class="image-bestSellers">
+                        <img [src]="'assets/images/' + product.imageURL" alt="">
+                    </div>
+                    <div class="star-rating pt-2">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                    </div>
+                    <p class=" ps-4 pe-4 ">{{product.name}}</p>
+                    <p class=" ps-4 pe-4 text-black fw-bold">{{product.price}}</p>
+
                 </div>
             </div>
         </div>
     </div>
-    <div class="container mt-5">
-        <h4 class="mb-3">Best Sellers</h4>
+    <div class="container conatiner-bestSellers mt-5">
+        <h4 class="mb-4 fw-bold fs-5 title  title-font" style="text-align: center;">Best Sellers</h4>
         <div class="row">
-            <div class="col-md-2">
-                <div class=" card  border-0 card-custom d-flex align-items-center mb-2">
-                    <img [src]="'assets/images/img2.png'" class="image-bestSellers" alt="">
-                    <p class="mt-3">Headphones&Earbuds</p>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class=" card  border-0 card-custom d-flex align-items-center mb-2">
-                    <img [src]="'assets/images/img2.png'" class="image-bestSellers" alt="">
-                    <p class="mt-3">Headphones&Earbuds</p>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class=" card  border-0 card-custom d-flex align-items-center mb-2">
-                    <img [src]="'assets/images/img2.png'" class="image-bestSellers" alt="">
-                    <p class="mt-3">Headphones&Earbuds</p>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class=" card  border-0 card-custom d-flex align-items-center mb-2">
-                    <img [src]="'assets/images/img2.png'" class="image-bestSellers" alt="">
-                    <p class="mt-3">Headphones&Earbuds</p>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class=" card  border-0 card-custom d-flex align-items-center mb-2">
-                    <img [src]="'assets/images/img2.png'" class="image-bestSellers" alt="">
-                    <p class="mt-3">Headphones&Earbuds</p>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class=" card  border-0 card-custom d-flex align-items-center mb-2">
-                    <img [src]="'assets/images/img2.png'" class="image-bestSellers" alt="">
-                    <p class="mt-3">Headphones&Earbuds</p>
+            <div class="col-md-2 " *ngFor="let product of products">
+                <div class=" card  border-0 card-custom d-flex align-items-center mb-2 ">
+                    <div class="image-bestSellers">
+                        <img [src]="'assets/images/' + product.imageURL" alt="">
+                    </div>
+                    <div class="star-rating pt-2">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                    </div>
+                    <p class=" ps-4 pe-4 ">{{product.name}}</p>
+                    <p class=" ps-4 pe-4 text-black fw-bold">{{product.price}}</p>
+
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="container container-promotion  mt-5 ">
+        <div class="row">
+            <div class="col-md-4">
+                <div class=" card " style="height:415px; background-color: rgb(236, 236, 236);">
+                    <img [src]="'assets/images/pro5.png'" class="img-card" alt=""
+                        style="width: 100%; height: 100%; object-fit: contain;">
+                    <div class="overlay-text">
+                        <p class="p-pro">20% OFF</p>
+                        <p class="p-title">Sony Headphones</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class=" card border-0 ">
+                    <div class="row ">
+                        <div class="col-md-6">
+                            <div class="card" style="height: 200px; background-color: rgb(236, 236, 236);">
+                                <img [src]="'assets/images/pro6.png'" alt="" class="img-card "
+                                    style="width: 70%; height: 100%; object-fit: contain;margin-left: 125px ;">
+                                <div class="overlay-text">
+                                    <p class="p-pro">20% OFF</p>
+                                    <p class="p-title">Security Camera</p>
+                                    <p>Protect your home</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card" style="height: 200px; background-color: rgb(236, 236, 236);">
+                                <img [src]="'assets/images/pro4.png'" alt="" class="img-card "
+                                    style="width: 70%; height: 100%; object-fit: contain;margin-left: 125px ;">
+                                <div class="overlay-text">
+                                    <p class="p-pro">20% OFF</p>
+                                    <p class="p-title">Samsung Earbuds</p>
+                                    <p>Experience clear <br>sound</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card  mt-3"
+                            style="width: 100% ; height: 200px; background-color: rgb(236, 236, 236);">
+                            <img [src]="'assets/images/pro2.png'" alt=""
+                                style="width: 100%; height: 100%; object-fit: contain;">
+                            <div class="overlay-text">
+                                <p class="p-pro">10% OFF</p>
+                                <p class="p-title">Smartwatches</p>
+                                <p> Take your activity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="subscribe " style="background-color: rgb(236, 236, 236);">
         <div class="row ">
             <div class="col-md-6 d-flex align-items-center text-subscribe">
@@ -134,3 +180,4 @@
             </div>
         </div>
     </div>
+</div>

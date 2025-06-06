@@ -32,6 +32,7 @@ export class HomeComponent {
           next: (data) => {
           this.products = data;
           console.log(data);
+          
         },
         error: (error) => {
           console.log(error);
