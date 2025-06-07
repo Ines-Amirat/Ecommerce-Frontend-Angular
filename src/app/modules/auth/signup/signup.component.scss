@@ -14,3 +14,42 @@
     background-color:  #B78C83 !important;
     color: rgb(0, 0, 0) !important;
 }
+
+.fjalla-one-regular {
+    font-family: "Fjalla One", sans-serif;
+    font-style: normal;
+}
+
+.signup-container{
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.btn-black {
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    width: 100%;
+    border: none;
+
+
+}
+
+.form-control:focus{
+     outline: none ;
+     box-shadow: none ;
+}
+
+.form-control::placeholder{
+     color: #ccc;
+     opacity: 1;
+}
+
+.label-info{
+    font-weight: 600;
+    font-size: 14px;
+
+}

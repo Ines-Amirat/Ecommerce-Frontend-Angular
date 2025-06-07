@@ -11,6 +11,7 @@ export class SignupComponent {
   name:string ='';
   email: string = '';
   password: string = '';
+  confirmPassword:string = ''
 
   nameError:string ='';
   emailError:string ='';
