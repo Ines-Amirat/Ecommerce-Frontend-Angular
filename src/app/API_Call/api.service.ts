@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Product } from '../models/Product';
 import { CartProduct } from '../models/CartProduct';
 import { Category } from '../models/Category';
+import { Brand } from '../models/Brand';
 
 @Injectable({
   providedIn: 'root'
@@ -56,6 +57,15 @@ export class ApiService {
 
   getFeaturedProducts(): Observable<any> {
     return this.http.get<Product[]>(`${this.apiURL}/product/getFeatured`);
+  }
+  
+  getSubCategoryByCat(id:number): Observable<any> {
+    return this.http.get<Category[]>(`${this.apiURL}/subCategories/get/${id}`);
+  }
+  
+
+  getBrand(): Observable<any>{
+      return this.http.get<Brand[]>(`${this.apiURL}/brand/get`);
   }
 
 

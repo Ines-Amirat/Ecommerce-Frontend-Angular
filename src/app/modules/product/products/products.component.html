@@ -1,39 +1,80 @@
-<div class="content pt-4 vh-100" >
-  <div class="container  custom-input justify-content-between  d-flex align-items-center w-100 ">
-    <div>
-      <p class=" fs-4 fw-bold ps-3" style="margin-bottom: 0%; ">All Products</p>
-    </div>
-    <div class=" d-flex align-items-center position-relative search-wrapper ">
-      <i class="bi bi-search search-icon  position-absolute "></i>
-      <input type="text" class="form-control search-input flex-grow-1" placeholder="Search on Shop ">
-      <button class="btn btn-outline-secondary btn-search" type="button">
-        Search
-      </button>
-    </div>
-  </div>
-  <div class="main">
+<div>
+  <div class="" style="padding-right: 60px;padding-left: 60px; margin-top: 5px;">
     <div class="row">
-      <div class="col-md-2 category-list">
-        <h3 class="category-title">Categories</h3>
-        <ul class="list-group">
-          <li class="item fw-normal" *ngFor=" let category of categories">{{category.name}}</li>
-        </ul>
+      <div class="col-md-2 " style="padding-left: 40px; padding-right: 40px; ">
+        <div>
+          <h3 class="category-title text-black  mb-2">Categories</h3>
+          <div style="border-bottom: 1px solid  rgb(219, 218, 218); width: 100%;"></div>
+          <ul class="list-group mt-3">
+            <li class="item pb-2" *ngFor=" let cat of categories">
+              <div class="d-flex justify-content-between align-items-center " (click)="toggleCategory(cat)">
+                <span class="">{{cat.categoryName}}</span>
+                <i class="bi fa-lg" style="font-size: 8px;" [ngClass]="{
+                          'bi bi-chevron-up' : cat.expanded,
+                          'bi bi-chevron-down': !cat.expanded
+                       }">
+                </i>
+              </div>
+              <ul *ngIf="cat.expanded " class="ps-3 pt-1 list-group">
+                <li *ngFor=" let sub of subCategories" class="text-muted small">
+                  {{sub.subCategoryName}}
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="mt-3" >
+          <h3 class="price-title text-black  mb-2 ">Price</h3>
+          <div style="border-bottom: 1px solid  rgb(219, 218, 218); width: 100%;"></div>
+          <div class="d-flex align-items-center justify-content-center  gap-3 mt-3">
+            <i class="bi bi-currency-dollar" style="margin-right: -15px;"></i>
+            <input type="number " class="form-control" style="width: 80px;" placeholder="From">
+            <input type="number " class="form-control" style="width: 80px;" placeholder="To">
+          </div>
+        </div>
+        <div  class="mt-3">
+          <div class="d-flex justify-content-between align-items-center" (click)="toggleBrand()">
+            <h3 class="brand-title text-black  mb-2">Brand</h3>
+            <i class="bi fa-lg" style="font-size: 14px;" [ngClass]="{
+                          'bi bi-dash' : showBrand,
+                          'bi bi-plus': !showBrand
+                       }">
+            </i>
+          </div>
+          <div style="border-bottom: 1px solid  rgb(219, 218, 218); width: 100%;"></div>
+          <ul class="list-group mt-3" *ngIf="showBrand">
+            <li class="item pb-2" *ngFor=" let br of brand">
+                {{br.brandName}}
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="col-md-10">
-        <div class="container mt-4 list-products">
-          <div class="row">
-            <div class="col-md-2 mb-4 p-1" (click)="goToProduct(product.productId)" *ngFor="let product of products">
-              <div class="card">
-                <div style="background-color: #f0f0f0; padding: 15px;">
-                  <img [src]="'assets/images/' +product.imageURL" alt="" >
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">{{product.name}}</h5>
-                  <p class="price">${{product.price}}</p>
-                  <div class="d-flex align-items-center gap-1" >
-                    <button class="btn btn-white btn-sm  mt-2">Add to Cart</button>
-                    <button class="btn btn-black btn-sm mt-2">Buy Now</button>
-                  </div>
+      <div class="col-md-10" style="padding-left: 60px; ">
+        <div class=" d-flex justify-content-between  mb-3">
+          <div>
+            <p class="text-black fw-bold " style="margin-bottom: 0%; font-size: 20px; ">All Products</p>
+          </div>
+          <div class=" d-flex align-items-center position-relative search-wrapper">
+            <i class="bi bi-search search-icon  position-absolute "></i>
+            <input type="text" class="form-control search-input flex-grow-1" placeholder="Search on Shop ">
+            <button class="btn btn-outline-secondary btn-search" type="button">
+              Search
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2 mb-4 p-1" style="background-color: aquamarine;" (click)="goToProduct(product.productId)"
+            *ngFor="let product of products">
+            <div class="card">
+              <div style="background-color: #f0f0f0; padding: 15px;">
+                <img [src]="'assets/images/' +product.imageURL" alt="">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="price">${{product.price}}</p>
+                <div class="d-flex align-items-center gap-1">
+                  <button class="btn btn-white btn-sm  mt-2">Add to Cart</button>
+                  <button class="btn btn-black btn-sm mt-2">Buy Now</button>
                 </div>
               </div>
             </div>
