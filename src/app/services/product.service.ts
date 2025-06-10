@@ -19,9 +19,10 @@ export class ProductService {
       
    }
 
-    featuredProducts():Observable<any> {
+   featuredProducts():Observable<any> {
       return this.apiService.getFeaturedProducts();
         
    }
 
+   
 }

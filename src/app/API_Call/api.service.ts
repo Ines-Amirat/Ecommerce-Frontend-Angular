@@ -68,6 +68,8 @@ export class ApiService {
       return this.http.get<Brand[]>(`${this.apiURL}/brand/get`);
   }
 
+  
+
 
 
 }

@@ -20,8 +20,13 @@ export class ProductsComponent {
   categories : Category[] = [];
   subCategories : SubCategory[] =[];
   brand : Brand[] =[];
+  showTitle : boolean =false;
   expanded? :boolean;
   showBrand: boolean =false;
+  showColor: boolean = false;
+  showAvailability : boolean = false;
+  showPrice : boolean=false;
+  colors :string[] = ['black','#b8b2a6' ,'rgb(255, 255, 255)',' #2d0f50','#11173a','#d12323','#552844','#284114']
 
   constructor(private ProductService: ProductService,private categoryService: CategoryService ,
      private router:Router , private subCategoryService:SubCategoryService , private brandService: BrandService) { }
@@ -42,7 +47,7 @@ export class ProductsComponent {
       .subscribe({
         next: (data) => {
           this.categories = data;
-          this.categories = data.map( (cat: any) => ({
+          this.categories = data.map((cat: any) => ({
              ...cat,
              expanded : false 
           }));
@@ -54,7 +59,10 @@ export class ProductsComponent {
     
   }
   goToProduct(id : number){
-    this.router.navigate(['products',id]);
+    this.router.navigate(['productss']);
+  }
+  toggleTitle(){
+      this.showTitle =  !this.showTitle;
   }
 
   toggleCategory(cat:Category){
@@ -70,7 +78,10 @@ export class ProductsComponent {
              }     
          })
   }
-
+  
+  togglePrice(){
+      this.showPrice =  !this.showPrice;
+  }
 
    toggleBrand(){
       this.showBrand =  !this.showBrand;
@@ -85,8 +96,18 @@ export class ProductsComponent {
              }     
          })
   }
-  
 
+  toggleColor(){
+      this.showColor =  !this.showColor;
+  }
+
+  getColor(col: string){
+    
+  }
+
+  toggleAvailability(){
+      this.showAvailability =  !this.showAvailability;
+  }
 
  
 }

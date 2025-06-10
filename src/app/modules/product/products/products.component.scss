@@ -159,3 +159,14 @@
 .btn-black:hover {
     background-color: #f0f0f0
 }
+
+.color-circle{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #888;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+   
+}
